@@ -48,11 +48,12 @@
     height: 60px;
     padding: 20px 0;
     font-size: 13px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
   
-  .main-nav .logo {
+  .logo {
     width: 110px;
+    padding-top: 20px;
   }
   
   .main-nav ul {
