@@ -1,27 +1,36 @@
-const menuBtn = document.querySelector(".menu-icon span");
-const searchBtn = document.querySelector(".search-icon");
-const cancelBtn = document.querySelector(".cancel-icon");
-const items = document.querySelector(".nav-items");
-const form = document.querySelector("form");
+var dataSource = {
+  datasets: [
+   {
+      data: [],
+      backgroundColor:[],
+}
+],
 
-menuBtn.onclick = ()=>{
-  items.classList.add("active");
-  menuBtn.classList.add("hide");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
+labels:[ ]
+};
+
+function createChart(){
+ var ctx = document.getElementById('myChart').getContext('2d');
+ var myChart  = new Chart(ctx, {
+
+     type: 'pie',
+     data: dataSource
+ });
 }
 
-cancelBtn.onclick = ()=>{
-  items.classList.remove("active");
-  menuBtn.classList.remove("hide");
-  searchBtn.classList.remove("hide");
-  cancelBtn.classList.remove("show");
-  form.classList.remove("active");
-  cancelBtn.style.color = "#ff3d00";
+function getCurrentUpdates(){
+axios.get('http://localhost:4000/CurrentUpdates')
+.then(function(res){
+console.log(res);
+for(var i = 0; i < res.data.length; i++){
+dataSource.datasets[0].data[i] = res.data[i].budget;
+dataSource.labels[i] = res.data[i].title;
+dataSource.datasets[0].backgroundColor[i] = res.data[i].color;
+
+}
+createChart();
+
+});
 }
 
-searchBtn.onclick = ()=>{
-  form.classList.add("active");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-}
+getCurrentUpdates();
