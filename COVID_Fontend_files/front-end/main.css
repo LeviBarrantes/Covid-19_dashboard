@@ -43,6 +43,14 @@ body {
   margin-bottom: 20px;
   background-color:  #ffffff;
 }
+
+#clock {
+  color: #000000;
+  font-size: 17px;
+  margin:auto;
+  padding-left: 500px;
+}
+
 form.Zip input[type=text] {
   padding: 10px;
   font-size: 17px;
@@ -202,4 +210,3 @@ form.Zip::after {
   background-color: rgb(165, 162, 162);
 
 }
-
