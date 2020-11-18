@@ -18,7 +18,7 @@ body {
   max-width: 1500px;
   margin: auto;
 }
-
+/*Css for skip for Accessibility*/
 .skip-nav{
 
   position: absolute;
@@ -38,19 +38,22 @@ body {
   padding-left: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-row: 1;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color:  #ffffff;
+  grid-gap: 550px;
 }
-
+/*clock*/
 #clock {
   color: #000000;
   font-size: 17px;
-  margin:auto;
-  padding-left: 500px;
-}
+  display:flex;
+  align-items: right;
+  float: right;
+  padding-right: 75px;
 
+}
+/*Search box */
 form.Zip input[type=text] {
   padding: 10px;
   font-size: 17px;
@@ -59,7 +62,7 @@ form.Zip input[type=text] {
   width: 80%;
   background: #f5f3f3;
 }
-
+/*button for the search*/
 form.Zip button {
   float: left;
   width: 20%;
@@ -80,6 +83,10 @@ form.Zip::after {
   content: "";
   clear: both;
   display: table;
+}
+.Zip{
+  float: right;
+
 }
 /**************************************************************************/
 
@@ -161,7 +168,7 @@ form.Zip::after {
   font-size: 15px;;
 }
 
-/* covid */
+/* covid testing center, news, updates */
 .covid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -178,7 +185,7 @@ form.Zip::after {
 .covid h3 {
   margin-bottom: 5px;
 }
-/*----------------------------------------------------------------*/
+/*--footer----*/
 
  .foot {
   background-color: #333;

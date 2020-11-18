@@ -18,38 +18,11 @@
 
 <div class="toplogo">
 <img src="../Img/logo.png" alt="website logo" class="logo">
-
 <form class="Zip" action="/action_page.php" style="margin:auto;max-width:300px">
   <input type="text" placeholder="Search by Zipcode" name="search2">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
-<div id="clock"></div>
-    <script>function currentTime() {
-      var date = new Date(); /* creating object of Date class */
-      var hour = date.getHours();
-      var min = date.getMinutes();
-      var sec = date.getSeconds();
-      var midday = "AM";
-      midday = (hour >= 12) ? "PM" : "AM"; /* assigning AM/PM */
-      hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour); /* assigning hour in 12-hour format */
-      hour = updateTime(hour);
-      min = updateTime(min);
-      sec = updateTime(sec);
-      document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday; /* adding time to the div */
-        var t = setTimeout(currentTime, 1000); /* setting timer */
-    }
-
-    function updateTime(k) { /* appending 0 before time elements if less than 10 */
-      if (k < 10) {
-        return "0" + k;
-      }
-      else {
-        return k;
-      }
-    }
-    currentTime();
-</script>
 
 </div>
 
@@ -62,10 +35,35 @@
     <li><a href="./LocalNews.html">Local News</a></li>
     <li><a href="./donate.html">Donate Now!!</a></li>
  </ul>
-
-
-
 </nav>
+
+<div id="clock">
+  <script>function currentTime() {
+    var date = new Date(); /* creating object of Date class */
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    var midday = "AM";
+    midday = (hour >= 12) ? "PM" : "AM"; /* assigning AM/PM */
+    hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour); /* assigning hour in 12-hour format */
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+    document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday; /* adding time to the div */
+      var t = setTimeout(currentTime, 1000); /* setting timer */
+  }
+
+  function updateTime(k) { /* appending 0 before time elements if less than 10 */
+    if (k < 10) {
+      return "0" + k;
+    }
+    else {
+      return k;
+    }
+  }
+  currentTime();
+</script>
+</div>
 <!--place holder-->
 <div class="container">
 <header class="map">
