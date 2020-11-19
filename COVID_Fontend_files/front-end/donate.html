@@ -1,107 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../front-end/reset.css">
-    <link rel="stylesheet" href="../front-end/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <title>COVID-19</title>
-
-    <meta name="description" content= "The purpose of this covid 19 dashboard is to help the NC community to stay update with
-    latest numbers and news">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../front-end/reset.css">
+  <link rel="stylesheet" href="../front-end/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <title>COVID-19 - Donate</title>
+  <meta name="description" content= "The purpose of this Covid-19 dashboard is to help  NC
+    community to stay up to date with latest numbers and news">
 </head>
-<body>
+
+<body onload="setMode()">
   <a href="#main" class="skip-nav">Skip Navigation</a>
+  <div class="toplogo" id="topHeader">
+    <img src="../Img/logo.png" alt="website logo" class="logo">
+    <form class="Zip" action="/action_page.php" style="margin:auto;max-width:300px">
+      <input type="text" placeholder="Search by Zipcode" name="search2">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
 
-<div class="toplogo">
-<img src="../Img/logo.png" alt="website logo" class="logo">
-
-<form class="Zip" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Search by Zipcode" name="search2">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-</div>
-
-<nav class = "main-nav">
-
-
- <ul class="main-menu">
-    <li><a href="./Index.html">Home</a></li>
-    <li><a href="./CDC.html">CDC</a></li>
-    <li><a href="./LocalNews.html">Local News</a></li>
-    <li><a href="./donate.html">Donate Now!!</a></li>
- </ul>
-
-
-
-</nav>
-<!--place holder-->
-<div class="container">
-<header class="map">
-<h2>NC map</h2>
-<p>
-    Current statistics
-
-</p>
-
-    <a href="#" class="btn">NC COVID-19<i class="fas fa-chevron-right"></i>
-    </a>
+  <nav class = "main-nav">
+    <ul class="main-menu">
+      <li><a href="./Index.html">Home</a></li>
+      <li><a href="./CDC.html">CDC</a></li>
+      <li><a href="./news.html">Local News</a></li>
+      <li><a href="./donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <!--place holder-->
+  <div class="container">
+    <header class="map">
+      <h2>NC map</h2>
+      <p>
+        Current statistics
+      </p>
+      <a href="#" class="btn">NC COVID-19<i class="fas fa-chevron-right"></i></a>
     </header>
+
     <!--Place holder-->
-    <section class="covid">
-        <div>
-          <img src="../Img/COVID-testing.jpg" alt="">
-          <h3>Testing locations (Covid-19)</h3>
-          <p>
-            Some text
-          </p>
+    <section class="covid" id="covidInfoTab">
+      <div>
+        <img src="../Img/COVID-testing.jpg" alt="">
+        <h3 id="covidText">Testing locations (Covid-19)</h3>
+        <p>
+          Search for nearby Covid-19 testing sites using your zipcode within North Carolina.
+        </p>
+      </div>
+      <div>
+        <img src="../Img/NEWS.jpg" alt="" />
+        <h3 id="covidText">Local News</h3>
+        <p id="covidText">
+          Some text
+        </p>
+      </div>
+      <div>
+        <img src="../Img/covid_up.jpg" alt="" />
+        <h3 id="covidText">Chart</h3>
+        <p>
+          <canvas id="myChart" width="100" height="100"></canvas>
+        </p>
+      </div>
+    </section>
+  </div>
 
-        </div>
-        <div>
-          <img src="../Img/NEWS.jpg" alt="" />
-          <h3>Local News 3</h3>
-          <p>
-            Some text
-          </p>
-
-        </div>
-        <div>
-          <img src="../Img/covid_up.jpg" alt="" />
-
-          <h3>Chart</h3>
-          <p>
-               <canvas id="myChart" width="100" height="100"></canvas>
-
-           </p>
-
-
-        </div>
-
-      </section>
-
-
-
-</div>
-
-
-        <footer class="foot">
-          <a href="./legal.html">Legal</a>
-          <a href="./Accessibility.html">Accessibility</a>
-	<div class="copyright">
-    <p>Copyright 2020, North Carolina Covid-19 Dashboard </p>
-
+  <footer class="foot">
+	  <div class="copyright">
+      <p><small>Copyright 2020, North Carolina Covid-19 Dashboard</p></small>
     </div>
+      <div class="btns">
+        <button type="button" onclick="changeMode(this)" id="modeButton" class="footerBtn">Dark Mode</button>
+        <button type="button" id="accessibilityBtn" class="footerBtn">Accessibility</button>
+        <button type="button" id="legalBtn" class="footerBtn">Legal</button>
+      </div>
+  </footer>
 
-        </footer>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
-
-
+  <script src="style.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 </body>
 </html>
 
