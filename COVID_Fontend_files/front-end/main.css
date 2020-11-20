@@ -4,13 +4,13 @@
   padding: 0;
 }
 
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #000;
   font-size: 15px;
   line-height: 1.5;
+  overflow: auto;
+
 }
 
 .container {
@@ -18,56 +18,41 @@ body {
   max-width: 1500px;
   margin: auto;
 }
-/*Css for skip for Accessibility*/
-.skip-nav{
 
+.skip-nav {
   position: absolute;
   top: 0;
   left: 0;
   padding: var(--spacing-unit-small);
-  color:var(--button-color);
-  text-decoration:none ;
+  color: var(--button-color);
+  text-decoration: none;
   transform: translateY(-100%);
 }
-.skip-nav:focus{
-   transform: none;
+.skip-nav:focus {
+  transform: none;
 }
 
 /*-------------------------------------------------------*/
 .toplogo {
-  padding-left: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color:  #ffffff;
-  grid-gap: 550px;
+  width: 100%;
+  display: inline-block;
+  background-color: #ffffff;
 }
-/*clock*/
-#clock {
-  color: #000000;
-  font-size: 17px;
-  display:flex;
-  align-items: right;
-  float: right;
-  padding-right: 75px;
+.toplogo img {
+  padding-top: 10px;
+}
 
-}
-/*Search box */
-form.Zip input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
+form.Zip {
   width: 80%;
-  background: #f5f3f3;
+  float: right;
+  padding-top: 25px;
+  padding-right: 10px;
 }
-/*button for the search*/
+
 form.Zip button {
-  float: left;
-  width: 20%;
+  float: right;
   padding: 10px;
-  background: #2196F3;
+  background: #2196f3;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
@@ -79,17 +64,20 @@ form.Zip button:hover {
   background: #0b7dda;
 }
 
+form.Zip input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: right;
+  width: 80%;
+  background: #f5f3f3;
+}
+
 form.Zip::after {
   content: "";
   clear: both;
-  display: table;
-}
-.Zip{
-  float: right;
-
 }
 /**************************************************************************/
-
 
 /* Style the search box inside the navigation bar */
 /* Nav */
@@ -100,7 +88,8 @@ form.Zip::after {
   height: 60px;
   padding: 20px 0;
   font-size: 13px;
-  padding-bottom: 30px;
+  font-weight: bold;
+  padding-bottom: 70px;
 }
 
 .main-nav ul {
@@ -113,7 +102,7 @@ form.Zip::after {
 }
 
 .main-nav ul li {
-  padding: 0 10px;
+  padding: 0px 10px;
   float: left;
 }
 
@@ -131,16 +120,14 @@ form.Zip::after {
 
 .main-nav ul.main-menu {
   flex: 1;
-  margin-left: 20px;
+  padding-left: 52px;
 }
-
-
 
 /* map */
 .map {
   width: 100%;
   height: 400px;
-  background: url('../Img/map.image.png') no-repeat center center/cover;
+  background: url("../Img/map.image.png") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,7 +137,8 @@ form.Zip::after {
   margin-bottom: 20px;
 }
 
-.map h2, .map p {
+.map h2,
+.map p {
   margin-bottom: 10px;
 }
 
@@ -165,10 +153,10 @@ form.Zip::after {
   padding: 10px 20px;
   background: #262626;
   color: #fff;
-  font-size: 15px;;
+  font-size: 15px;
 }
 
-/* covid testing center, news, updates */
+/* covid */
 .covid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -185,35 +173,152 @@ form.Zip::after {
 .covid h3 {
   margin-bottom: 5px;
 }
-/*--footer----*/
+/*----------------------------------------------------------------*/
 
- .foot {
+.foot {
   background-color: #333;
   overflow: hidden;
+  padding-left: 5px;
 }
 
-/* Style the links inside the navigation bar */
-.foot a {
-  float: right;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.foot .btns {
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: right;
 }
+
+.foot .footerBtn {
+  background-color: #333;
+  border: none;
+  color: #ffffff;
+  padding: 15px 5px;
+  outline: none;
+}
+
+.foot .footerBtn:hover {
+  background-color: rgb(165, 162, 162);
+}
+
 /*copyright layout*/
-.foot p{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.foot .copyright {
+  float: left;
+  width: 50%;
   color: white;
-  padding: 14px 16px;
-  font-size: 17px;
-
+  padding: 10px 10px;
 }
 
 /* Change the color of links on hover */
 .foot a:hover {
   background-color: rgb(165, 162, 162);
+}
+/*------------*donate*-------------------------------------*/
 
+main img {
+  width: 100%;
+  height: 600px;
+  float: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+
+}
+main img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto ;
+display:flex;
+}
+
+main h1 {
+  text-align: center;
+}
+:root {
+  --main-radius: 5px;
+  --main-padding: 20px;
+}
+
+.donate {
+  display: grid;
+  height: 50vh;
+  grid-template-columns: repeat(auto-fit,3, 1fr);
+  grid-template-rows: repeat(auto-fit,2, 1.5fr);;
+  grid-template-areas:
+    "content1 content2 content3"
+    "content4 content5 content6";
+  grid-gap: 10px;
+
+}
+.donate{
+  resize: both;
+  overflow: auto;
+}
+
+#content1 {
+  background-color: #f5f3f3;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding: 20px;
+}
+ .donate p {
+  padding-top:5px ;
+  text-align: left;
+}
+.btn1 {
+  text-align: center ;
+  cursor: pointer;
+  display: center;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #262626;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  display:flex;
+}
+
+#content2 {
+  background-color: #f5f3f3;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding: 20px;
+}
+
+#content3 {
+  background-color: #f5f3f3;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding: 20px;
+}
+
+#content4 {
+  background-color: #f5f3f3;
+  grid-area: content4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding: 20px;
+}
+
+#content5 {
+  background-color: #f5f3f3;
+  grid-area: content5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding: 20px;
+}
+
+#content6 {
+  background-color: #f5f3f3;
+  grid-area: content6;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding: 20px;
 }
