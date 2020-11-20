@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
+    <script type="text/javascript" src="../front-end/covi19.js"></script>
   <title>COVID-19 - Home</title>
   <meta name="description" content= "The purpose of this Covid-19 dashboard is to help  NC
     community to stay up to date with latest numbers and news">
@@ -16,7 +17,7 @@
 <body onload="setMode()">
   <a href="#main" class="skip-nav">Skip Navigation</a>
   <div class="toplogo" id="topHeader">
-    <img src="../Img/logo1.png" alt="website logo" class="logo">
+    <img src="../Img/logo.png" alt="website logo" class="logo">
     <form class="Zip" action="/action_page.php" style="margin:auto;max-width:300px">
       <input type="text" placeholder="Search by Zipcode" name="search2">
       <button type="submit"><i class="fa fa-search"></i></button>
@@ -33,11 +34,6 @@
   </nav>
   <!--place holder-->
   <div class="container">
-  	<p>Current Date: <span id="date"></span></p>
-		<script>
-			var dt = new Date();
-			document.getElementById("date").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (("0"+dt.getDate()).slice(-2)) +"/"+ (dt.getFullYear());
-		</script>
     <header class="map">
       <h2>NC map</h2>
       <p>
@@ -59,7 +55,7 @@
         <img src="../Img/NEWS.jpg" alt="" />
         <h3 id="covidText">Local News</h3>
         <p id="covidText">
-          Some text
+          <div id="website_div"></div>
         </p>
       </div>
       <div>
