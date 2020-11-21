@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,7 @@
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
   <title>COVID-19 - Donate</title>
-  <meta name="description" content="The purpose of this Covid-19 dashboard is to help  NC
+  <meta name="description" content= "The purpose of this Covid-19 dashboard is to help  NC
     community to stay up to date with latest numbers and news">
 </head>
 
@@ -18,9 +17,13 @@
   <a href="#main" class="skip-nav">Skip Navigation</a>
   <div class="toplogo" id="topHeader">
     <img src="../Img/logo.png" alt="website logo" class="logo">
+    <form class="Zip" action="/action_page.php" style="margin:auto;max-width:300px">
+      <input type="text" placeholder="Search by Zipcode" name="search2">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
 
-  <nav class="main-nav">
+  <nav class = "main-nav">
     <ul class="main-menu">
       <li><a href="./Index.html">Home</a></li>
       <li><a href="./CDC.html">CDC</a></li>
@@ -30,76 +33,134 @@
   </nav>
   <!--place holder-->
   <div class="container">
-    <main>
-      <h1>Donate now and help us fight the virus </h1>
-      <img src="../Img/Final_Donate.jpg" alt="">
+    <header class="donatebackground">
+      <a href="#" class="btn">DONATE NOW<i class="donatebtn"></i></a>
+    </header>
 
-    </main>
-    <div class="donate">
-      <div id="content1">
-        <a href="https://covid19responsefund.org/en/" class="btn1">COVID-19 Solidarity Response Fund for WHO<i
-            class="fas fa-chevron-right"></i></a>
-        <p> Donations support WHO’s work, including with partners, to track and understand the spread of the virus;
-          to ensure patients get the care they need and frontline workers get essential supplies and information;and to
+    <!--Place holder-->
+    <section class="donateOption" id="covidInfoTab">
+      <div>
+        <img src="../Img/who.png" alt="">
+        <!--<h3 id="covidText"> World Health Organization</h3>-->
+        <a href="https://covid19responsefund.org/en/" target="_blank">
+          <h3>
+            COVID-19 Solidarity Response Fund for WHO
+          </h3>
+        </a>
+        <p>
+          It’s never been more urgent to support the global response, led by the World
+          Health Organization (WHO).Donations support WHO’s work, including with partners,
+          to track and understand the spread of the virus; to ensure patients get the care
+          they need and frontline workers get essential supplies and information; and to
           accelerate research and development of a vaccine and treatments for all who need them.
         </p>
       </div>
-      <div id="content2">
-        <a href="https://app.mobilecause.com/vf/HELPCharMeck" class="btn1"> The COVID-19 Response Fund<i
-            class="fas fa-chevron-right"></i></a>
-        <p>In partnership with Mecklenburg County, the City of Charlotte, corporations, houses of faith and others, the COVID-19
-        Response Fund helps those most in need through support to nonprofit organizations.
+
+      <div>
+        <img src="../Img/American Red Cross.jpeg" alt="" />
+        <!-- <h3 id="covidText">American Red Cross</h3> -->
+        <a href="https://www.redcrossblood.org/give.html/find-drive" target="_blank">
+          <h3>
+            American Red Cross
+          </h3>
+        </a>
+        <p id="covidText">
+          The American Red Cross has a constant and ongoing need for blood and platelet donations.
+          There is no known end date in this fight against coronavirus, and the Red Cross needs the
+          help of blood and platelet donors and blood drive hosts to meet the needs of patient care.
+          Please schedule your next donation appointment now to help prevent another blood shortage.
         </p>
       </div>
-      <div id="content3">
-        <a href="https://relief.nfl.com/" class="btn1">NFL PARTNERS' RELIEF EFFORTS<i
-            class="fas fa-chevron-right"></i></a>
-        <p> The NFL continues to work closely with our partners to support those in need.
-          Donate today and help provide relief to those impacted most by the COVID-19 pandemic, from those suffering to
-          the workers on the front lines. Every donation is helpful, small or large.
+
+      <div>
+        <img src="../Img/salvationarmy.jpg" alt="" />
+        <!-- <h3 id="covidText">The Salvation Army</h3> -->
+        <a href="https://give.salvationarmyusa.org/give/276832/#!/donation/checkout" target="_blank">
+          <h3>
+            The Salvation Army
+          </h3>
+        </a>
+        <p>
+          During this time of crisis, your generosity helps us safely shelter the most vulnerable,
+          serve first responders, feed the hungry, and provide other critical services. When you give,
+          your donation directly benefits people in need throughout your local community.
         </p>
       </div>
-      <div id="content4">
-        <a href="https://www.wunc.org/post/how-you-can-help-nc-community-during-coronavirus" class="btn1">The Animal Protection Society of Durham <i
-            class="fas fa-chevron-right"></i></a>
-        <p> The Animal Protection Society of Durham is accepting donations of pet food to assist pet owners facing financial
-        hardship due to COVID-19.
+
+      <div>
+        <img src="../Img/Feeding America.jpg" alt="" />
+       <!-- <h3 id="covidText">Feeding America</h3>-->
+       <a href="https://secure.feedingamerica.org/site/Donation2;jsessionid=00000000.
+       app20126a?idb=1096493603&df_id=29151&29151.donation=form1&mfc_pref=T&NONCE_TOKEN=
+       E1E27C7CEA774F91EFB3502D75E335E5&s_channel=google&s_onsite_promo=MainNav_Donate&
+       s_subsrc=https://www.feedingamerica.org/about-us/press-room/feeding-america-
+       establishes-covid-19-response-fund-help-food-banks-during&s_src=W20BORGSC&29151_
+       donation=form1&s_referrer=google&_ga=2.209073106.119272393.1605933910-277661124.
+       1605933910" target="_blank">
+        <h3>
+          Feeding America
+        </h3>
+       </a>
+        <p id="covidText">
+          As the COVID-19 pandemic continues, we are committed to serving communities and
+          individuals facing hunger across America, wherever they are. Every dollar raised
+          from the COVID-19 response fund will be used to get food and funds to local food banks
+          across the U.S.
         </p>
       </div>
-      <div id="content5">
-        <a href="https://elcentronc.networkforgood.com/projects/95669-covid-19-relief" class="btn1">El Centro Hispano<i
-            class="fas fa-chevron-right"></i></a>
-        <p>Donations are welcomed to El Centro Hispano's COVID-19 Crisis Response Fund to support community members who have been
-        impacted due to the Covid-19 outbreak.
+
+      <div>
+        <img src="../Img/nfl.jpeg" alt="" />
+        <!-- <h3 id="covidText">Save The Children</h3> -->
+        <a href="https://relief.nfl.com/" target="_blank">
+          <h3>
+            NFL PARTNERS' RELIEF EFFORTS
+          </h3>
+         </a>
+        <p id="covidText">
+          In this ongoing time of uncertainty, our communities and nation at large need
+          us to keep supporting each other. The NFL continues to work closely with our
+          partners to support those in need. Donate today and help provide relief to those
+          impacted most by the COVID-19 pandemic, from those suffering to the workers on
+          the front lines. Every donation is helpful, small or large.
         </p>
       </div>
-      <div id="content6">
-        <a href="https://covid19responsefund.org/en/" class="btn1">Feeding America<i
-            class="fas fa-chevron-right"></i></a>
-        <p> Feeding America operates a network of 200 food banks and 60,000 food pantries across the U.S., and is accepting
-        donations to its COVID-19 Response Fund.
+
+      <div>
+        <img src="../Img/foundationCarolina.png" alt="" />
+        <!-- <h3 id="covidText">Team Rubicon</h3> -->
+        <a href="https://app.mobilecause.com/vf/HELPCharMeck" target="_blank">
+          <h3>
+            The COVID-19 Response Fund
+          </h3>
+         </a>
+        <p id="covidText">
+          In partnership with Mecklenburg County, the City of Charlotte, corporations,
+          houses of faith and others, the COVID-19 Response Fund helps those most in need
+          through support to nonprofit organizations.
+
         </p>
       </div>
-    </div>
+    </section>
   </div>
+
+
+
   <footer class="foot">
-    <div class="copyright">
+	  <div class="copyright">
       <p><small>Copyright 2020, North Carolina Covid-19 Dashboard</p></small>
     </div>
-    <div class="btns">
-      <button type="button" onclick="changeMode(this)" id="modeButton" class="footerBtn">Dark Mode</button>
-      <button type="button" id="accessibilityBtn" class="footerBtn">Accessibility</button>
-      <button type="button" id="legalBtn" class="footerBtn">Legal</button>
-    </div>
+      <div class="btns">
+        <button type="button" onclick="changeMode(this)" id="modeButton" class="footerBtn">Dark Mode</button>
+        <button type="button" id="accessibilityBtn" class="footerBtn">Accessibility</button>
+        <button type="button" id="legalBtn" class="footerBtn">Legal</button>
+      </div>
   </footer>
 
   <script src="style.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
-    integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-    integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 </body>
-
 </html>
+
+
