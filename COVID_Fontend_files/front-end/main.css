@@ -101,6 +101,7 @@ form.Zip::after {
 .main-nav ul li {
   padding: 0px 10px;
   float: left;
+  position: relative;
 }
 
 .main-nav ul li a {
@@ -218,8 +219,8 @@ form.Zip::after {
 
 .donatebackground {
   width: 100%;
-  height: 970px;
-  background: url('../Img/Final_Donate.jpg') no-repeat center center/cover;
+  height: 500px;
+  background: url('../Img/kid.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,6 +228,22 @@ form.Zip::after {
   justify-content: flex-end;
   padding-bottom: 50px;
   margin-bottom: 20px;
+}
+.donatebackground .donatenow {
+  color: rgba(255, 255, 255, 0.817);
+  font-weight: bold;
+  font-size: 50px;
+  padding-bottom: 15px;
+  padding-right: 800px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.donatebackground .savelives {
+  color: rgba(255, 255, 255, 0.817);
+  font-weight: bold;
+  font-size: 50px;
+  padding-bottom: 100px;
+  margin-right: 800px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 /* Donate Page - Donation Option Layout*/
 .donateOption {
@@ -246,4 +263,14 @@ form.Zip::after {
 .donateOption h3 {
   margin-bottom: 5px;
 }
+
+.donateOption a {
+  text-decoration: none;
+  color: rgb(62, 61, 61);
+}
+
+.donateOption a:hover{
+  color: rgb(188, 157, 220);
+}
+
 
