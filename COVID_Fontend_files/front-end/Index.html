@@ -18,7 +18,7 @@
   <div class="toplogo" id="topHeader">
     <img src="../Img/logo.png" alt="website logo" class="logo">
     <form class="Zip" action="/action_page.php" style="margin:auto;max-width:300px">
-      <input type="text" placeholder="Search by Zipcode" name="search2">
+      <input type="text" placeholder="Search" name="search2">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
@@ -27,43 +27,24 @@
     <ul class="main-menu">
       <li><a href="./Index.html">Home</a></li>
       <li><a href="https://www.cdc.gov/" target="_blank">CDC</a></li>
+      <li><a href="./searchbyzipcode.html">Search By Zipcode</a></li>
       <li><a href="./news.html">News</a></li>
       <li><a href="./donate.html">Donate</a></li>
     </ul>
   </nav>
   <!--place holder-->
   <div class="container">
-    <header class="map">
-      <h2>NC map</h2>
-      <p>
-        Current statistics
-      </p>
-      <a href="#" class="btn">NC COVID-19<i class="fas fa-chevron-right"></i></a>
-    </header>
+    <div class="map">
+      <div class="statdiv">
+        <h3>
+          CURRENT STATISTIC
+        </h3>
+      </div>
+    </div>
 
     <!--Place holder-->
     <section class="covid" id="covidInfoTab">
-      <div>
-        <img src="../Img/COVID-testing.jpg" alt="">
-        <h3 id="covidText">Nearby Testing Sites</h3>
-        <p>
-          Search for nearby Covid-19 testing sites using your zipcode within North Carolina.
-        </p>
-      </div>
-      <div>
-        <img src="../Img/NEWS.jpg" alt="" />
-        <h3 id="covidText">News</h3>
-        <p id="covidText">
-          Some text
-        </p>
-      </div>
-      <div>
-        <img src="../Img/covid_up.jpg" alt="" />
-        <h3 id="covidText">Chart</h3>
-        <p>
-          <canvas id="myChart" width="150" height="200"></canvas>
-        </p>
-      </div>
+
     </section>
   </div>
 
@@ -73,7 +54,6 @@
     </div>
       <div class="btns">
         <button type="button" onclick="changeMode(this)" id="modeButton" class="footerBtn">Dark Mode</button>
-        <button type="button" id="accessibilityBtn" class="footerBtn">Accessibility</button>
         <button href="./legal.html" type="button" id="legalBtn" class="footerBtn" onclick="window.location.href='./legal.html'">
           Terms
         </button>
